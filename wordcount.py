@@ -49,6 +49,9 @@ def print_words(filename):
     by word for the given file.
     """
     # Your code here
+    word_list = create_word_dict(filename)
+    for key, value in sorted(word_list.items()):
+        print(key, ' : ', value)
     return
 
 
