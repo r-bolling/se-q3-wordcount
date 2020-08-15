@@ -41,6 +41,7 @@ def create_word_dict(filename):
             content_dict[key] = content_dict.get(key) + 1
         else:
             content_dict.setdefault(key, 1)
+    words.close()
     return content_dict
 
 
