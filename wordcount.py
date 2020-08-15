@@ -25,7 +25,7 @@ should return a dictionary with words as keys, and their counts as values.
 
 # Your name, plus anyone who helped you with this assignment
 # Give credit where credit is due.
-__author__ = "r-bolling with help Kenzie Academy Lessons"
+__author__ = "r-bolling with help from Kenzie Academy Lessons"
 
 import sys
 
@@ -58,6 +58,15 @@ def print_words(filename):
 def print_top(filename):
     """Prints the top count listing for the given file."""
     # Your code here
+    word_list = create_word_dict(filename)
+    count = 0
+    for key, value in sorted(
+        word_list.items(), key=lambda i: i[1], reverse=True
+    ):
+        if count == 20:
+            break
+        print(key, ' : ', value)
+        count += 1
     return
 
 
